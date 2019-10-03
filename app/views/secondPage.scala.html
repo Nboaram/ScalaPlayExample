@@ -1,0 +1,24 @@
+@(title: String = "Greetings")(products: List[String] = List("Cheetahs", "Novelty Cars", "Gatorade", "Russian Dolls", "Sphinx Statue"))
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>@title</title>
+    </head>
+    <body>
+        <div>
+            <h1>@title</h1>
+            <h2>Here are some things we be selling</h2>
+            <ul>
+            @if(products.isEmpty) {
+                We are out of stock!
+            } else {
+                @for(i <- products) {
+                    <li>@i</li>
+                }
+            }
+            </ul>
+        </div>
+    </body>
+</html>
